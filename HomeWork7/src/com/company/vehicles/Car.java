@@ -33,8 +33,8 @@ public class Car {
         System.out.println("Поворот налево");
     }
 
-    public void toString1(){
-        System.out.println("Авто: " + modelCar + "Класс: "+ autoClass +"Вес: " + weight + ", ФИО водителя: " + driver.name + driver.drivingEx + ", Мотор: " + motor.manufacturer + motor.power);
+    public String toString(){
+        return ("Авто: " + modelCar + "Класс: "+ autoClass +"Вес: " + weight + ", ФИО водителя: " + driver.name + driver.drivingEx + ", Мотор: " + motor.manufacturer + motor.power);
     }
 
 }

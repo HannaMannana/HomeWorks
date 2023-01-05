@@ -11,10 +11,9 @@ public class mainCar {
         Engine engine = new Engine(" 1200 ", "Германия, ");
         Car car = new Car("Nisan, ", "Cтандарт, ", 2500, driver, engine);
 
-        car.toString1();
         car.turnRight();
         car.stop();
         car.start();
-
+        System.out.println(car);
     }
 }
