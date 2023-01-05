@@ -20,8 +20,7 @@ public class Main6 {
             }
             System.out.println("Нормальное завершение.");
         } catch (IncorrectInfoException e) {
-            System.out.println("Перехваченное исключение." + e);
-            e.printStackTrace();
+            System.out.println("Некорректен возраст" + e);
 
         }
         try {
@@ -30,8 +29,7 @@ public class Main6 {
             }
             System.out.println("Нормальное завершение.");
         } catch (IncorrectInfoException e) {
-            System.out.println("Перехваченное исключение." + e);
-            e.printStackTrace();
+            System.out.println("Введено некорректное имя" + e);
         }
 
     }
