@@ -21,6 +21,7 @@ public class Main6 {
             System.out.println("Нормальное завершение.");
         } catch (IncorrectInfoException e) {
             System.out.println("Перехваченное исключение." + e);
+            e.printStackTrace();
 
         }
         try {
@@ -30,6 +31,7 @@ public class Main6 {
             System.out.println("Нормальное завершение.");
         } catch (IncorrectInfoException e) {
             System.out.println("Перехваченное исключение." + e);
+            e.printStackTrace();
         }
 
     }
