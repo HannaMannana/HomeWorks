@@ -7,7 +7,7 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) {
-        String[] list = {"Катя", "Петя", "Вася"};
+        String[] list = {"Катя", "Катя", "Вася","Петя","Петя"};
 
         countValues(list);
 
@@ -17,10 +17,13 @@ public class Main {
 
     public static <K> Map<K, Integer> countValues(K[] ks) {
         Map<K, Integer> map = new HashMap<>();
-        int i = 1;
-        for (K k : ks) {
-            map.put(k, i);
-            i++;
+        for (int i =0; i < ks.length; i++){
+            int amount = 1;
+            K key = ks[i];
+            if (map.containsKey(key) == true){
+                amount = map.get(key) + 1;
+            }
+            map.put(key, amount);
         }
         return map;
     }
