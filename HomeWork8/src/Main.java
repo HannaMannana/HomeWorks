@@ -23,3 +23,42 @@ public class Main {
 //3 * 56 = 168.
 //Используем метод StringBuilder.append().
 //Замените символ “=” на слово “равно”. Используйте метод StringBuilder.replace()
+
+ class Main10 {
+    public static void main(String[] args) {
+        StringBuilder strB = createSomeString(3, 56);
+        System.out.println(strB);
+
+        modifySomeString(strB);
+        System.out.println(strB);
+
+        modifySomeStringForAll(strB,"+","плюс");
+        System.out.println(strB);
+
+
+    }
+
+    public static StringBuilder createSomeString(int a, int b){
+        StringBuilder str = new StringBuilder();
+        str.append(a).append(" + ").append(b).append(" = ").append(a+b).append("\n")
+                .append(a).append(" - ").append(b).append(" = ").append(a-b).append("\n")
+                .append(a).append(" * ").append(b).append(" = ").append(a*b).append("\n");
+        return str;
+    }
+    public static StringBuilder modifySomeString(StringBuilder stringBuilder){
+        int i;
+        while ((i=stringBuilder.indexOf("=")) != -1){
+            stringBuilder.replace(i,i+1, " равно");
+        }
+        return stringBuilder;
+    }
+
+     public static StringBuilder modifySomeStringForAll(StringBuilder stringBuilder, String oldString, String newString){
+         int i;
+         while ((i=stringBuilder.indexOf(oldString)) != -1){
+             stringBuilder.replace(i,i+1, (newString));
+         }
+         return stringBuilder;
+     }
+
+    }
